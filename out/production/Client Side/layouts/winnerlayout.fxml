@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.geometry.Rectangle2D?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.StackPane?>
+<AnchorPane fx:id="mainRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="1000.0" styleClass="Container" stylesheets="@../style/GameStyle.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.winnerController">
+
+    <stylesheets>
+        <URL value="@../style/gameboard.css"/>
+    </stylesheets>
+    <children>
+
+        <StackPane fx:id="winnerPan" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+            <children>
+                <Group StackPane.alignment="CENTER">
+                    <VBox alignment="CENTER" spacing="20" styleClass="winnerBox" stylesheets="@../style/GameStyle.css">
+                        <Label prefHeight="17.0"  text="WINNER" styleClass="playerInfo"
+                               stylesheets="@../style/GameStyle.css"/>
+                        <HBox alignment="CENTER" spacing="5">
+                            <Label fx:id="winnerName" prefHeight="17.0"  text="Mohammed Ashraf" styleClass="playerInfo"
+                                   stylesheets="@../style/GameStyle.css"/>
+                            <ImageView fitHeight="60.0" fitWidth="79.0" pickOnBounds="true"
+                                       preserveRatio="true">
+                                <image>
+                                    <Image url="@../Resources/winner-removebg-preview.png"/>
+                                </image>
+                            </ImageView>
+                        </HBox>
+                    </VBox>
+                </Group>
+            </children>
+        </StackPane>
+
+
+        <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#BackToMain" styleClass="buttonBack"
+                stylesheets="@../style/GameStyle.css">
+            <graphic>
+                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Resources/icons8-go-back-100.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+    </children>
+</AnchorPane>
